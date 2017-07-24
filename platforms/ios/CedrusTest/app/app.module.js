@@ -1,0 +1,44 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nativescript_module_1 = require("nativescript-angular/nativescript.module");
+var forms_1 = require("nativescript-angular/forms");
+var angular_1 = require("nativescript-checkbox/angular");
+var nativescript_ng2_fonticon_1 = require("nativescript-ng2-fonticon");
+var angular_2 = require("nativescript-drop-down/angular");
+var app_component_1 = require("./app.component");
+var icon_component_1 = require("./lib/components/icon/icon.component");
+var button_component_1 = require("./lib/components/button/button.component");
+var input_component_1 = require("./lib/components/input/input.component");
+var item_component_1 = require("./lib/components/item/item.component");
+var list_component_1 = require("./lib/components/list/list.component");
+var selectable_component_1 = require("./lib/components/selectable/selectable.component");
+var checkbox_component_1 = require("./lib/components/checkbox/checkbox.component");
+var switch_component_1 = require("./lib/components/switch/switch.component");
+var select_component_1 = require("./lib/components/select/select.component");
+var element_registry_1 = require("nativescript-angular/element-registry");
+element_registry_1.registerElement("Fab", function () { return require("nativescript-floatingactionbutton").Fab; });
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    core_1.NgModule({
+        declarations: [app_component_1.AppComponent, icon_component_1.CfIconComponent, button_component_1.CfButtonComponent, input_component_1.CfInputComponent, item_component_1.CfItemComponent, list_component_1.CfListComponent, selectable_component_1.CfSelectableComponent, checkbox_component_1.CfCheckboxComponent, switch_component_1.CfSwitchComponent, select_component_1.CfSelectComponent],
+        bootstrap: [app_component_1.AppComponent],
+        providers: [nativescript_ng2_fonticon_1.TNSFontIconService],
+        imports: [
+            nativescript_module_1.NativeScriptModule,
+            forms_1.NativeScriptFormsModule,
+            angular_1.TNSCheckBoxModule,
+            angular_2.DropDownModule,
+            nativescript_ng2_fonticon_1.TNSFontIconModule.forRoot({
+                'mdi': 'material-design-icons.css'
+            })
+        ],
+        schemas: [core_1.NO_ERRORS_SCHEMA],
+    })
+], AppModule);
+exports.AppModule = AppModule;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImFwcC5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxzQ0FBMkQ7QUFDM0QsZ0ZBQThFO0FBQzlFLG9EQUFxRTtBQUNyRSx5REFBa0U7QUFDbEUsdUVBQWtGO0FBQ2xGLDBEQUFnRTtBQUNoRSxpREFBK0M7QUFDL0MsdUVBQXVFO0FBQ3ZFLDZFQUE2RTtBQUM3RSwwRUFBMEU7QUFDMUUsdUVBQXVFO0FBQ3ZFLHVFQUF1RTtBQUN2RSx5RkFBeUY7QUFDekYsbUZBQW1GO0FBQ25GLDZFQUE2RTtBQUM3RSw2RUFBNkU7QUFDN0UsMEVBQXdFO0FBRXhFLGtDQUFlLENBQUMsS0FBSyxFQUFFLGNBQU0sT0FBQSxPQUFPLENBQUMsbUNBQW1DLENBQUMsQ0FBQyxHQUFHLEVBQWhELENBQWdELENBQUMsQ0FBQztBQWdCL0UsSUFBYSxTQUFTO0lBQXRCO0lBQXdCLENBQUM7SUFBRCxnQkFBQztBQUFELENBQUMsQUFBekIsSUFBeUI7QUFBWixTQUFTO0lBZnJCLGVBQVEsQ0FBQztRQUNSLFlBQVksRUFBRSxDQUFDLDRCQUFZLEVBQUUsZ0NBQWUsRUFBRSxvQ0FBaUIsRUFBRSxrQ0FBZ0IsRUFBRSxnQ0FBZSxFQUFFLGdDQUFlLEVBQUUsNENBQXFCLEVBQUUsd0NBQW1CLEVBQUUsb0NBQWlCLEVBQUUsb0NBQWlCLENBQUM7UUFDdE0sU0FBUyxFQUFFLENBQUMsNEJBQVksQ0FBQztRQUN6QixTQUFTLEVBQUUsQ0FBQyw4Q0FBa0IsQ0FBQztRQUMvQixPQUFPLEVBQUU7WUFDUCx3Q0FBa0I7WUFDbEIsK0JBQXVCO1lBQ3ZCLDJCQUFpQjtZQUNqQix3QkFBYztZQUNkLDZDQUFpQixDQUFDLE9BQU8sQ0FBQztnQkFDdEIsS0FBSyxFQUFFLDJCQUEyQjthQUNyQyxDQUFDO1NBQ0g7UUFDRCxPQUFPLEVBQUUsQ0FBQyx1QkFBZ0IsQ0FBQztLQUM1QixDQUFDO0dBQ1csU0FBUyxDQUFHO0FBQVosOEJBQVMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSwgTk9fRVJST1JTX1NDSEVNQSB9IGZyb20gXCJAYW5ndWxhci9jb3JlXCI7XG5pbXBvcnQgeyBOYXRpdmVTY3JpcHRNb2R1bGUgfSBmcm9tIFwibmF0aXZlc2NyaXB0LWFuZ3VsYXIvbmF0aXZlc2NyaXB0Lm1vZHVsZVwiO1xuaW1wb3J0IHsgTmF0aXZlU2NyaXB0Rm9ybXNNb2R1bGUgfSBmcm9tIFwibmF0aXZlc2NyaXB0LWFuZ3VsYXIvZm9ybXNcIjtcbmltcG9ydCB7IFROU0NoZWNrQm94TW9kdWxlIH0gZnJvbSAnbmF0aXZlc2NyaXB0LWNoZWNrYm94L2FuZ3VsYXInO1xuaW1wb3J0IHsgVE5TRm9udEljb25Nb2R1bGUsIFROU0ZvbnRJY29uU2VydmljZSB9IGZyb20gJ25hdGl2ZXNjcmlwdC1uZzItZm9udGljb24nO1xuaW1wb3J0IHsgRHJvcERvd25Nb2R1bGUgfSBmcm9tIFwibmF0aXZlc2NyaXB0LWRyb3AtZG93bi9hbmd1bGFyXCI7XG5pbXBvcnQgeyBBcHBDb21wb25lbnQgfSBmcm9tIFwiLi9hcHAuY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZkljb25Db21wb25lbnQgfSBmcm9tIFwiLi9saWIvY29tcG9uZW50cy9pY29uL2ljb24uY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZkJ1dHRvbkNvbXBvbmVudCB9IGZyb20gXCIuL2xpYi9jb21wb25lbnRzL2J1dHRvbi9idXR0b24uY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZklucHV0Q29tcG9uZW50IH0gZnJvbSBcIi4vbGliL2NvbXBvbmVudHMvaW5wdXQvaW5wdXQuY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZkl0ZW1Db21wb25lbnQgfSBmcm9tIFwiLi9saWIvY29tcG9uZW50cy9pdGVtL2l0ZW0uY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZkxpc3RDb21wb25lbnQgfSBmcm9tIFwiLi9saWIvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZlNlbGVjdGFibGVDb21wb25lbnQgfSBmcm9tIFwiLi9saWIvY29tcG9uZW50cy9zZWxlY3RhYmxlL3NlbGVjdGFibGUuY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZkNoZWNrYm94Q29tcG9uZW50IH0gZnJvbSBcIi4vbGliL2NvbXBvbmVudHMvY2hlY2tib3gvY2hlY2tib3guY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZlN3aXRjaENvbXBvbmVudCB9IGZyb20gXCIuL2xpYi9jb21wb25lbnRzL3N3aXRjaC9zd2l0Y2guY29tcG9uZW50XCI7XG5pbXBvcnQgeyBDZlNlbGVjdENvbXBvbmVudCB9IGZyb20gXCIuL2xpYi9jb21wb25lbnRzL3NlbGVjdC9zZWxlY3QuY29tcG9uZW50XCI7XG5pbXBvcnQgeyByZWdpc3RlckVsZW1lbnQgfSBmcm9tIFwibmF0aXZlc2NyaXB0LWFuZ3VsYXIvZWxlbWVudC1yZWdpc3RyeVwiO1xuXG5yZWdpc3RlckVsZW1lbnQoXCJGYWJcIiwgKCkgPT4gcmVxdWlyZShcIm5hdGl2ZXNjcmlwdC1mbG9hdGluZ2FjdGlvbmJ1dHRvblwiKS5GYWIpO1xuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbQXBwQ29tcG9uZW50LCBDZkljb25Db21wb25lbnQsIENmQnV0dG9uQ29tcG9uZW50LCBDZklucHV0Q29tcG9uZW50LCBDZkl0ZW1Db21wb25lbnQsIENmTGlzdENvbXBvbmVudCwgQ2ZTZWxlY3RhYmxlQ29tcG9uZW50LCBDZkNoZWNrYm94Q29tcG9uZW50LCBDZlN3aXRjaENvbXBvbmVudCwgQ2ZTZWxlY3RDb21wb25lbnRdLFxuICBib290c3RyYXA6IFtBcHBDb21wb25lbnRdLFxuICBwcm92aWRlcnM6IFtUTlNGb250SWNvblNlcnZpY2VdLFxuICBpbXBvcnRzOiBbXG4gICAgTmF0aXZlU2NyaXB0TW9kdWxlLFxuICAgIE5hdGl2ZVNjcmlwdEZvcm1zTW9kdWxlLFxuICAgIFROU0NoZWNrQm94TW9kdWxlLFxuICAgIERyb3BEb3duTW9kdWxlLFxuICAgIFROU0ZvbnRJY29uTW9kdWxlLmZvclJvb3Qoe1xuICAgICAgICAnbWRpJzogJ21hdGVyaWFsLWRlc2lnbi1pY29ucy5jc3MnXG4gICAgfSlcbiAgXSxcbiAgc2NoZW1hczogW05PX0VSUk9SU19TQ0hFTUFdLFxufSlcbmV4cG9ydCBjbGFzcyBBcHBNb2R1bGUge31cbiJdfQ==

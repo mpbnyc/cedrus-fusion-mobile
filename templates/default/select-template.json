@@ -1,0 +1,18 @@
+{
+    "property": {
+        "placeholder": "Select:",
+        "display": true,
+        "disable": false,
+        "items": [
+			{"itemValue": "item1", "itemLabel": "item1"},
+			{"itemValue": "item2", "itemLabel": "item2"},
+			{"itemValue": "item3", "itemLabel": "item3"}
+		]
+    },
+    "style": {
+        "container": {
+            "class": "",
+            "dynamicClass": ""
+        }
+    }
+}

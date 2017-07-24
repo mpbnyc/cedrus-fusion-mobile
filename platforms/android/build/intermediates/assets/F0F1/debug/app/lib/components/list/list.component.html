@@ -1,0 +1,6 @@
+<ScrollLayout>
+    <StackLayout class="list">
+        <h3 *ngIf="title">{{title}}</h3>
+        <ng-content #myContent></ng-content>
+    </StackLayout>
+</ScrollLayout>

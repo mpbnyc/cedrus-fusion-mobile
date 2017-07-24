@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Notification model provide notification for some CF Components. It is expanding Core Component for that.
+ * <h4>Example of Notification Model:</h4>
+ * <pre>{
+ *	value: this.notificationValue,
+ *	type: 'text'
+ * }</pre>
+ */
+var NotificationModel = (function () {
+    /**
+     * It is notification position. Default is <b>top-right</b> Can be also: <b>bottom-right</b>, <b>bottom-left</b>, <b>top-left</b>.
+     */
+    function NotificationModel(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return NotificationModel;
+}());
+exports.NotificationModel = NotificationModel;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibm90aWZpY2F0aW9uLm1vZGVsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibm90aWZpY2F0aW9uLm1vZGVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0E7Ozs7Ozs7R0FPRztBQUNIO0lBcUJDOztPQUVHO0lBQ0gsMkJBQVksTUFBbUI7UUFBbkIsdUJBQUEsRUFBQSxXQUFtQjtRQUM5QixNQUFNLENBQUMsTUFBTSxDQUFDLElBQUksRUFBRSxNQUFNLENBQUMsQ0FBQztJQUM3QixDQUFDO0lBQ0Ysd0JBQUM7QUFBRCxDQUFDLEFBM0JELElBMkJDO0FBM0JZLDhDQUFpQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEljb25Nb2RlbCB9IGZyb20gJy4uL2ljb24vaWNvbi5tb2RlbCc7XG4vKipcbiAqIE5vdGlmaWNhdGlvbiBtb2RlbCBwcm92aWRlIG5vdGlmaWNhdGlvbiBmb3Igc29tZSBDRiBDb21wb25lbnRzLiBJdCBpcyBleHBhbmRpbmcgQ29yZSBDb21wb25lbnQgZm9yIHRoYXQuXG4gKiA8aDQ+RXhhbXBsZSBvZiBOb3RpZmljYXRpb24gTW9kZWw6PC9oND5cbiAqIDxwcmU+e1xuICpcdHZhbHVlOiB0aGlzLm5vdGlmaWNhdGlvblZhbHVlLFxuICpcdHR5cGU6ICd0ZXh0J1xuICogfTwvcHJlPlxuICovXG5leHBvcnQgY2xhc3MgTm90aWZpY2F0aW9uTW9kZWwge1xuXHQvKipcblx0ICogSXQgaXMgdHlwZSBvZiBOb3RpZmljYXRpb24gdmFsdWUuIENhbiBiZSA8Yj50ZXh0PC9iPihkZWZhdWx0KSBvciA8Yj5pY29uPC9iPi4gT3B0aW9uYWwuXG5cdCAqL1xuXHR0eXBlPzogc3RyaW5nO1xuXHQvKipcblx0ICogSXQgaXMgbm90aWZpY2F0aW9uIHZhbHVlLiBPcHRpb25hbCBhbmQgZGVmYXVsdC5cblx0ICovXG5cdHZhbHVlPzogYW55O1xuXHQvKipcblx0ICogSXQgaXMgbm90aWZpY2F0aW9uIGljb24uIE9wdGlvbmFsLiBDYW4gYmUgdXNlZCB3aGVuIDxiPnR5cGU8L2I+IGlzIDxiPmljb248L2I+LlxuXHQgKi9cblx0aWNvbj86IEljb25Nb2RlbDtcblx0LyoqXG5cdCAqIENvbnN0cnVjdG9yIGZvciB0YWtpbmcgaW5wdXQgdmFsdWVzIGFuZCBnZW5lcmF0aW5nIG5ldyBOb3RpZmljYXRpb24gbW9kZWwuXG5cdCAqL1xuXHRjbGFzc2VzPzogc3RyaW5nO1xuXHQvKipcblx0ICogSXQgaXMgbm90aWZpY2F0aW9uIGNvbG9yIGNsYXNzZXMuIENhbiBiZSA8Yj5tYXQtcHJpbWFyeTwvYj4sIDxiPm1hdC1hY2NlbnQ8L2I+LCA8Yj5tYXQtd2FybjwvYj4gb3Igb3RoZXIgY3VzdG9tIGNsYXNzZXMuXG5cdCAqL1xuXHRwb3NpdGlvbj86IHN0cmluZztcblx0LyoqXG5cdCAqIEl0IGlzIG5vdGlmaWNhdGlvbiBwb3NpdGlvbi4gRGVmYXVsdCBpcyA8Yj50b3AtcmlnaHQ8L2I+IENhbiBiZSBhbHNvOiA8Yj5ib3R0b20tcmlnaHQ8L2I+LCA8Yj5ib3R0b20tbGVmdDwvYj4sIDxiPnRvcC1sZWZ0PC9iPi5cblx0ICovXG5cdGNvbnN0cnVjdG9yKHZhbHVlczogT2JqZWN0ID0ge30pIHtcblx0XHRPYmplY3QuYXNzaWduKHRoaXMsIHZhbHVlcyk7XG5cdH1cbn0iXX0=
