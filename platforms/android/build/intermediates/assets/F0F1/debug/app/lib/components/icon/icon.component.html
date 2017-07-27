@@ -1,1 +1,5 @@
-<Label class="mdi" [height]="currentIcon.size" [width]="currentIcon.size" [ngStyle]="{'fontSize': currentIcon.size, 'width': currentIcon.size, 'height': currentIcon.size}" [text]="currentIcon.name | fonticon" (tap)="cfIconToggled()"></Label>
+<Label class="mdi" [text]="currentIcon.name" [fontSize]="currentIcon.size" (tap)="cfIconToggled()"
+class="cf-icon-style cf-toggling-icon {{checked? styling?.icon?.class : styling?.toggleIcon?.icon? styling?.toggleIcon?.icon?.class: ''}}"
+[ngClass]="getIconClass()"
+>
+</Label>

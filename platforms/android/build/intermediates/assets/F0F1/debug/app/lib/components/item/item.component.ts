@@ -1,12 +1,16 @@
-import { Component, Input, Output, EventEmitter, OnInit, ElementRef, ViewChild } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef, ViewChild } from '@angular/core';
 import { CfCoreComponent } from '../core/core.component';
-import { IconModel } from '../../models/icon/icon.model'
+import { CfCheckboxComponent } from '../checkbox/checkbox.component';
+
+import { ItemStylingModel } from '../../models/item/item-styling.model';
+import { ItemTemplates } from '../../templates/item.template';
+
+import { TemplateService } from '../../services/template-service/template.service';
+
 @Component({
 	selector: 'cf-item',
-    templateUrl: "./lib/components/item/item.component.html",
-    styleUrls: [
-        './item.component.css'
-    ]
+	templateUrl: './lib/components/item/item.component.html',
+	styleUrls: ['./lib/components/item/item.component.scss']
 })
 
 /**
@@ -14,10 +18,19 @@ import { IconModel } from '../../models/icon/icon.model'
  * <p> The item component consists of 2 tabs: Default template (always shown) and the details template.</p>
  */
 export class CfItemComponent extends CfCoreComponent implements OnInit {
-	@Input() details: boolean = true;
+	
+	@Input()
+	styling: ItemStylingModel;
+	/**
+	 * <p> True if the item will contain a details tab.</p>
+	 */
+	@Input() details:boolean = false;
 
 	selectedValue: boolean  = false;
 
+	/**
+	 * <p> If the item is selectable, then show a checkbox</p>
+	 */
 	@Input() selectable: boolean = false;
 	@Input() withCheckbox: boolean = true;
 
@@ -34,25 +47,28 @@ export class CfItemComponent extends CfCoreComponent implements OnInit {
 
 	internalId: number;
 
-	showDetails: boolean = true;
+	/**
+	 * <p> Set to true when the user presses on the details icon.</p>
+	 */
+	showDetails: boolean = false;
 	
-	constructor(public elementRef: ElementRef) {
-		super(elementRef);
+	constructor(public elementRef: ElementRef,/**@hidden */ templateService:TemplateService) {
+		super(elementRef, templateService);
 	}
 
 	ngOnInit() {
-		// this.getMyTemplate("item",ItemTemplates).then(() => {
-		// if(this.styling==null)
-		// {
-		// 	this.styling = new ItemStylingModel (this.activeTemplate["style"]);
-		// }
-		// });
+		this.getMyTemplate("item",ItemTemplates).then(() => {
+		if(this.styling==null)
+		{
+			this.styling = new ItemStylingModel (this.activeTemplate["style"]);
+		}
+		});
 	}
 
 	ngOnChanges(changes: any){
 	}
 
-	// @ViewChild(CfCheckboxComponent) checkbox: CfCheckboxComponent;
+	@ViewChild(CfCheckboxComponent) checkbox: CfCheckboxComponent;
 
 	selectMe() {
 		if(this.selectable==true)
@@ -67,20 +83,5 @@ export class CfItemComponent extends CfCoreComponent implements OnInit {
 		{
 			this.itemClicked.emit({"id":this.internalId, "value": !this.selectedValue});
 		}
-    }
-    
-    showTheDetails() {
-        this.showDetails =!this.showDetails
-    }
-
-    myFusionIcon = new IconModel ({
-        name: 'mdi-chevron-right',
-        size: 50,
-        value: 'whatever',
-        toggle:{
-            name: 'mdi-chevron-right',
-            size: 50,
-            value: 'whatever'
-        }
-    });
+	}
 }

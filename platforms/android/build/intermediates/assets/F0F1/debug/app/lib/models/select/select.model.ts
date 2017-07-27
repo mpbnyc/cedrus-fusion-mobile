@@ -1,5 +1,7 @@
+import { CoreModel } from '../core/core.model';
 import { SelectItemModel } from './select-item.model';
-export class SelectModel {
+
+export class SelectModel extends CoreModel {
 
 	/**
 	 * <p>Array with option items</p>
@@ -25,6 +27,7 @@ export class SelectModel {
 	 * It is icon constructor, which take values from Select Component and create Select Model object.
 	 */
 	constructor(values: Object = {}) {
+		super(values);
 		Object.assign(this, values);
-    }
+	}
 }

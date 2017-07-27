@@ -1,5 +1,5 @@
 <StackLayout orientation="horizontal">
-    <cf-checkbox class="checkbox"></cf-checkbox>
+    <cf-checkbox class="checkbox" (click)="notifyList()" [hidden]="(!selectable || !withCheckbox)" style="vertical-align: center;" [(checked)]="selected" item=""></cf-checkbox>
     <StackLayout layout="row" [ngClass]="selected? styling?.selectedItem?.class: styling?.item?.class">
         <StackLayout class="cf-list-item-action" orientation="horizontal">
             <StackLayout class="cf-list-item-action" (tap)="selectMe()">

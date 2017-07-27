@@ -19,7 +19,7 @@ export const SwitchTemplates = {
             switch: {
                 class: "",
                 dynamicClass: "",
-                themeColor: "crimson"
+                themeColor: "#f2f2f2"
             }
         })
     }

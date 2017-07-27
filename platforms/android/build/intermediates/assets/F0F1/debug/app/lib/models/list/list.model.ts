@@ -1,14 +1,15 @@
-export class ListModel {
+import { CoreModel } from '../core/core.model';
+
+export class ListModel extends CoreModel {
 	/**
 	 * It is title for the Component.
 	 */
-    disable?: boolean;
-    display?: boolean;
 	title?: string;
 	/**
 	 * It is icon constructor, which take values from List Component and create List Model object.
 	 */
 	constructor(values: Object = {}) {
-        Object.assign(this, values);
+		super(values);
+		Object.assign(this, values);
 	}
 }

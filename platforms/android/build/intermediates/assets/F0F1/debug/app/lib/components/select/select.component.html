@@ -1,7 +1,16 @@
-<Layout padding="8">
+<Layout padding="8" *ngIf="cfSelect?.display" [class]="styling?.container?.class" [ngClass]="styling?.container?.dynamicClass">
     <DropDown #dd
             class="h2 cf-select"
             [items]="items"
-            [(ngModel)]="selectedItem">
+            [placeholder]="cfSelect?.placeholder"
+            [(ngModel)]="cfSelect.selected"
+            [required]="required"
+            [hidden]="!display"
+            [disabled]="disable"
+            (opened)="cfSelectOpened()"
+            (selectedIndexChanged)="cfSelectChanged()"
+            (closed)="cfSelectClosed()"
+            [class]="styling?.select?.class"
+            [ngClass]="styling?.select?.dynamicClass">
     </DropDown>
 </Layout>

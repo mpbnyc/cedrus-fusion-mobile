@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-ngx-slides",
+        "scope": null,
+        "escapedName": "nativescript-ngx-slides",
+        "name": "nativescript-ngx-slides",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/matt/CedrusTest"
+    ]
+  ],
+  "_from": "nativescript-ngx-slides@latest",
+  "_id": "nativescript-ngx-slides@0.4.0",
+  "_inCache": true,
+  "_location": "/nativescript-ngx-slides",
+  "_nodeVersion": "6.10.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-ngx-slides-0.4.0.tgz_1501070306476_0.4584192766342312"
+  },
+  "_npmUser": {
+    "name": "joshdsommer",
+    "email": "joshdsommer@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-ngx-slides",
+    "scope": null,
+    "escapedName": "nativescript-ngx-slides",
+    "name": "nativescript-ngx-slides",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-ngx-slides/-/nativescript-ngx-slides-0.4.0.tgz",
+  "_shasum": "f791c285083ec5a5fd3c91b75b06468564ffc470",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-ngx-slides",
+  "_where": "/Users/matt/CedrusTest",
+  "author": {
+    "name": "Josh Sommer",
+    "email": "joshdsommer@gmail.com",
+    "url": "https://twitter.com/_JoshSommer"
+  },
+  "bugs": {
+    "url": "https://github.com/TheOriginalJosh/nativescript-ngx-slides/issues"
+  },
+  "dependencies": {},
+  "description": "NativeScript + Angular version of the slides",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f791c285083ec5a5fd3c91b75b06468564ffc470",
+    "tarball": "https://registry.npmjs.org/nativescript-ngx-slides/-/nativescript-ngx-slides-0.4.0.tgz"
+  },
+  "gitHead": "7c6f1d793d95e16bcd79988c1a99f780b5d214d2",
+  "homepage": "https://github.com/TheOriginalJosh/nativescript-ngx-slides#readme",
+  "license": "MIT",
+  "main": "index",
+  "maintainers": [
+    {
+      "name": "joshdsommer",
+      "email": "joshdsommer@gmail.com"
+    }
+  ],
+  "name": "nativescript-ngx-slides",
+  "nativescript": {
+    "tns-ios": {
+      "version": "2.4.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOriginalJosh/nativescript-ngx-slides.git"
+  },
+  "scripts": {
+    "demo.android": "npm run preparedemo && cd demo && tns run android",
+    "demo.ios": "npm run preparedemo && cd demo && tns run ios",
+    "ios": "xcproj --project platforms/ios/YourApp.xcodeproj touch; xcproj --project platforms/ios/Pods/Pods.xcodeproj touch; tns livesync ios --emulator --watch",
+    "livesync.android": "cd slides  && tns livesync android --watch",
+    "livesync.ios": "cd slides  && tns livesync ios --watch",
+    "preparedemo": "cd demo && npm install .. ",
+    "setup": "npm install && cd demo && npm install && cd .. &&  cd demo && tns plugin add .. && cd .."
+  },
+  "version": "0.4.0"
+}

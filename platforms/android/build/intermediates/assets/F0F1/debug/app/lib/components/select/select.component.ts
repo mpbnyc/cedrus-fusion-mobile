@@ -1,12 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef, HostBinding, forwardRef } from '@angular/core';
 import { CfCoreComponent } from '../core/core.component';
 import { SelectModel } from '../../models/select/select.model';
-// import { SelectModel } from '../../models/select/select.model';
-// import { SelectStylingModel } from '../../models/select/select-styling.model';
+import { SelectStylingModel } from '../../models/select/select-styling.model';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } from '@angular/forms';
-// import { SelectTemplates } from '../../templates/select.template';
+import { SelectTemplates } from '../../templates/select.template';
 
-// import { TemplateService } from '../../services/template-service/template.service';
+import { TemplateService } from '../../services/template-service/template.service';
 
 /**
  * <p>CF Select Component</p> 
@@ -32,9 +31,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } f
 })
 
 export class CfSelectComponent extends CfCoreComponent implements OnInit {
-    selectedIndex: any;
-    @Input() items: string[];
-    selectedItem: string = 'hello';
+	
   /**@hidden */
   writeValue(obj: any): void {
 		if (obj) {
@@ -135,7 +132,7 @@ export class CfSelectComponent extends CfCoreComponent implements OnInit {
 	  *}
 	  * </pre>
 	  */
-//   @Input() public styling: SelectStylingModel;
+  @Input() public styling: SelectStylingModel;
 
   /**
    *<p> If select is required</p>
@@ -166,7 +163,7 @@ export class CfSelectComponent extends CfCoreComponent implements OnInit {
    * It is method which will emit corresponding event when value of Select was changed.
    */
   cfSelectChanged() { 
-    this.cfOnChange.emit(); 
+    this.cfOnChange.emit(this.cfSelect["selected"]); 
 		this.onChange(this.cfSelect["selected"]);
 		this.onTouched();
   }
@@ -191,22 +188,20 @@ export class CfSelectComponent extends CfCoreComponent implements OnInit {
   }
 
   /**@hidden */
-  constructor(  /**@hidden */public elementRef: ElementRef,/**@hidden */) {
-      super(elementRef);
-    }
+  constructor(  /**@hidden */public elementRef: ElementRef,/**@hidden */ templateService:TemplateService) { super(elementRef, templateService); }
   
   /**@hidden
    * It will be generated <b>cfSelect</b> object and rendered inside component template.
    */
   ngOnInit() { 
-    // if(this.notificationAction.observers.length > 0) this.notifacationClickable = 'notification-clickable';
+    if(this.notificationAction.observers.length > 0) this.notifacationClickable = 'notification-clickable';
 
-  	// this.getMyTemplate("select",SelectTemplates).then(() => {
-    //   if(this.properties==null)
-    //     this.properties = new SelectModel(this.activeTemplate["property"]);
-    //   if(this.styling==null)
-    //     this.styling = new SelectStylingModel(this.activeTemplate["style"]);
-    //   this.cfSelect = this.properties; 
-    // });
+  	this.getMyTemplate("select",SelectTemplates).then(() => {
+      if(this.properties==null)
+        this.properties = new SelectModel(this.activeTemplate["property"]);
+      if(this.styling==null)
+        this.styling = new SelectStylingModel(this.activeTemplate["style"]);
+      this.cfSelect = this.properties; 
+    });
   }
 }

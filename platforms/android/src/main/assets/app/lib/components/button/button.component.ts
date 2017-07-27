@@ -121,7 +121,7 @@ export class CfButtonComponent extends CfCoreComponent  implements OnInit{
    * <p>The event will be emitted when the button is clicked</p>
    */
   @Output()
-  onClick = new EventEmitter();
+  onTap = new EventEmitter();
 
    /**@hidden */
   constructor( /**@hidden */public elementRef: ElementRef,/**@hidden */ templateService:TemplateService) {
@@ -212,8 +212,8 @@ export class CfButtonComponent extends CfCoreComponent  implements OnInit{
   /** @hidden
    * <p>The method will emit event when the button is clicked</p>
    */
-  buttonClicked() {
-    this.onClick.emit();
+  buttonTapped() {
+    this.onTap.emit();
   }
 
   /** @hidden

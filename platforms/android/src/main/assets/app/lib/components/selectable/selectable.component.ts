@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef, ContentChild, TemplateRef, HostBinding, SimpleChanges} from '@angular/core';
 import { CfCoreComponent } from '../core/core.component';
 import { SelectableModel } from '../../models/selectable/selectable.model';
-// import { SelectableStylingModel } from '../../models/selectable/selectable-styling.model';
+import { SelectableStylingModel } from '../../models/selectable/selectable-styling.model';
 
 import { TemplateService } from '../../services/template-service/template.service';
 
@@ -20,7 +20,8 @@ import { TemplateService } from '../../services/template-service/template.servic
  */
 @Component({
   selector: 'cf-selectable',
-  template: '<ng-content></ng-content>',
+  templateUrl: './lib/components/selectable/selectable.component.html',
+  styleUrls: []
 })
 export class CfSelectableComponent extends CfCoreComponent implements OnInit {
 	/**@hidden */
@@ -94,7 +95,7 @@ export class CfSelectableComponent extends CfCoreComponent implements OnInit {
 		this.notificationAction.emit(notification); 
 	}
 	/**@hidden */
-	constructor(public elementRef: ElementRef, templateService: TemplateService /**@hidden */) { super(elementRef, templateService); }
+	constructor(public elementRef: ElementRef,/**@hidden */ templateService:TemplateService) { super(elementRef, templateService); }
 	/**@hidden
    * It will be generated <b>cfCheckbox</b> object and rendered inside component template. Also cfCheckStates function will initialize checkboxes states.
    */

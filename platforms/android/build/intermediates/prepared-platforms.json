@@ -13,6 +13,7 @@
     "nativescript-floatingactionbutton": true,
     "nativescript-material-icons": true,
     "nativescript-ng2-fonticon": true,
+    "nativescript-ngx-slides": true,
     "nativescript-radiobutton": true,
     "nativescript-theme-core": true,
     "reflect-metadata": true,

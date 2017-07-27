@@ -18,7 +18,7 @@ export class ButtonStylingModel extends CoreStylingModel {
         if(this.button==null)
         {
             this.button= new StylingModel();
-            this.button.themeColor="crimson";
+            this.button.themeColor="white";
         }
 
         if(this.iconStyling==null)

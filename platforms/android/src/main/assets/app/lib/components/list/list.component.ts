@@ -16,7 +16,7 @@ import { TemplateService } from '../../services/template-service/template.servic
 @Component({
 	selector: 'cf-list',
 	templateUrl: './lib/components/list/list.component.html',
-	styleUrls: ['./lib/components/list/list.component.scss']
+	styleUrls: ['./lib/components/list/list.component.css']
 })
 export class CfListComponent extends CfCoreComponent implements OnInit {
 	/**

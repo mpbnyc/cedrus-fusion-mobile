@@ -9,8 +9,8 @@ import { TemplateService } from '../../services/template-service/template.servic
 
 @Component({
 	selector: 'cf-item',
-	templateUrl: './item.component.html',
-	styleUrls: ['./item.component.scss']
+	templateUrl: './lib/components/item/item.component.html',
+	styleUrls: ['./lib/components/item/item.component.css']
 })
 
 /**

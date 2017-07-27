@@ -20,7 +20,7 @@ import { TemplateService } from '../../services/template-service/template.servic
 @Component({
   selector: 'cf-checkbox',
   templateUrl: './lib/components/checkbox/checkbox.component.html',
-  styleUrls: ['./lib/components/checkbox/checkbox.component.scss'],
+  styleUrls: ['./lib/components/checkbox/checkbox.component.css'],
   providers: [{provide: CfSelectableComponent, useExisting: forwardRef(() => CfCheckboxComponent)}]
 })
 

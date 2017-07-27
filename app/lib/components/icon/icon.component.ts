@@ -120,6 +120,9 @@ export class CfIconComponent extends CfCoreComponent implements OnInit {
 	@Output()
 	cfOnToggle: EventEmitter<any> = new EventEmitter<any>();
 
+	@Output()
+	cfOnTap: EventEmitter<any> = new EventEmitter<any>();
+
 	/** @hidden
 	 * It is function for set correct toggle value/icon and emmit event with icon state value.
 	 */
@@ -133,6 +136,8 @@ export class CfIconComponent extends CfCoreComponent implements OnInit {
 			else
 				this.currentIcon = this.cfIcon;
 			this.cfOnToggle.emit(this.currentIcon.value); 
+		} else {
+			this.cfOnTap.emit();
 		}
 	}
 	

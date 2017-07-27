@@ -21,7 +21,7 @@ export const ButtonTemplates = {
                 class: "default-container"
             },
             button: {
-                themeColor: "crimson"
+                themeColor: "white"
             },
             iconStyling: new IconStylingModel ({
                 icon: {
