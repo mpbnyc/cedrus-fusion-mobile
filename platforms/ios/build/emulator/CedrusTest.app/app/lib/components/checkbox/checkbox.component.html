@@ -1,9 +1,0 @@
-<cf-selectable>
-    <StackLayout *ngIf="cfCheckbox?.display">
-        <StackLayout orientation="horizontal" class="cf-checkbox-group-container">
-            <CheckBox:CheckBox [checked]="cfCheckbox.checked" *ngIf="cfCheckbox.itemPosition!=='before'" [(ngModel)]="cfCheckbox.checked" [disabled]="cfCheckbox?.disable"/>
-            <Layout class="checkbox-item"><ng-content></ng-content></Layout>
-            <CheckBox:CheckBox [checked]="cfCheckbox.checked" *ngIf="cfCheckbox.itemPosition!=='after'" [(ngModel)]="cfCheckbox.checked" [disabled]="cfCheckbox?.disable"/>
-        </StackLayout>
-    </StackLayout>
-</cf-selectable>
